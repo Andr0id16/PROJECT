@@ -1,0 +1,76 @@
+
+      /* The element to apply the animation to */
+      @keyframes titleanimation {
+        100% {
+          color: white;
+        }
+        
+        0% {
+          color: black;
+        }
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        padding: 15px;
+      }
+      #nav a,.footer a {
+        text-decoration: none;
+        color: white;
+        margin: 6px;
+        transition: color 0.5s ease;
+      }
+      #nav a:hover,.footer a:hover {
+        color: gold;
+      }
+      #nav,.footer {
+        background-image: linear-gradient(to right, black, rgb(31, 31, 31));
+        width: 100%;
+        padding: 15px;
+        font-family: Lato;
+        font-weight: 600;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+      }
+
+      .content {
+        display: flex;
+        background-image: url("ds.jpg"); 
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        /* background-color: whitesmoke; */
+        width: 100%;
+        min-height: 100vh;
+        align-content: center;
+        justify-content: center;
+        flex-wrap:wrap ;
+      }
+      .article {
+        background-color: white;
+        /* min-height: 80vh; */
+        width: 85%;
+        color:lightslategray;
+        margin: auto;
+        font-family: Lato;
+        text-align: justify;
+        padding: 30px;
+      }
+      #title {
+        background-color: black;
+        text-align: center;
+        font-family: Lato;
+        animation-name: titleanimation;
+        animation-duration: 6s;
+        animation-fill-mode: forwards;
+        box-sizing: border-box;
+        padding: 25px;
+        margin: 0;
+      }
+      .article-heading{
+          color:black
+      }
+      .in-article-pic{
+          float:right;
+          margin:25px;
+      }
