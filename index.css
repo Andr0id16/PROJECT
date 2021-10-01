@@ -5,8 +5,12 @@
   }
 
   0% {
-    color: black;
+    background-color: black;
   }
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
 }
 .sticky {
   position: fixed;
@@ -37,24 +41,24 @@
 
 .content {
   display: flex;
-  background-image: url("bgpattern.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* background-color: whitesmoke; */
+  background-image: linear-gradient(#f80c53, #f80c53);
   width: 100%;
   min-height: 100vh;
-  align-content: center;
+  align-content: center0;
   justify-content: center;
   flex-wrap: wrap;
 }
 .article {
   background-color: white;
-  /* min-height: 80vh; */
+  min-height: 85vh;
   width: 85%;
   color: lightslategray;
   margin: auto;
   font-family: Lato;
+  font-size: large;
   text-align: justify;
   padding: 30px;
 }
@@ -75,4 +79,82 @@
 .in-article-pic {
   float: right;
   margin: 25px;
+}
+
+.shop {
+  display: flex;
+  font-family: Lato;
+  text-align: justify;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.products {
+  background-color: white;
+  height: 140px;
+  width: 120px;
+  margin: 30px;
+  color: black;
+  font-family: Lato;
+  text-align: center;
+  padding: 30px;
+  border-radius: 4px;
+  border: 2px solid rgb(109, 109, 109);
+  box-shadow: none;
+  transition: color 0.5s, width 0.5s, height 0.5s, box-shadow 0.5s,
+    border-radius 0.5s;
+}
+
+.products:hover {
+  height: 150px;
+  width: 130px;
+  box-shadow: 6px 4px 10px rgb(165, 165, 165);
+  border-radius: 3px;
+}
+
+thead tr td {
+  font-size: x-large;
+  color: black;
+}
+tr:nth-child(1) {
+  font-weight: 900;
+  color: #242424;
+}
+tr:nth-child(2) {
+  font-weight: 600;
+  color: #303030;
+}
+tr:nth-child(3) {
+  font-weight: 500;
+  color: #303030;
+}
+td:first-child {
+  width: 100px;
+}
+td:nth-child(2) {
+  width: 400px;
+}
+td:nth-child(3) {
+  width: 120px;
+}
+
+#signup label {
+  font-size: x-large;
+  color: #000;
+}
+
+#signup input {
+  font-size: small;
+  width: 60%;
+  max-width: 500px;
+  padding: 6px;
+  margin-bottom: 30px;
+  margin-top: 8px;
+  height: 35px;
+}
+#signup input:focus {
+  outline: black;
+  border: 2px solid black;
 }

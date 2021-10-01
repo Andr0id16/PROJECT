@@ -1,21 +1,9 @@
-//DOM document object model
-//a webpage is a document it can be displayed in the browser or as the hrml source 
-//document is the object and it ahs the tags,etc as its properties
-//scripting langauge such as js can be used to modify these DOM properties
-
-//window
-//doc
-//html
-    //head
-        //meta
-    //body
-        //SCRIPT
-//getElementById()//only name of id # not required first such id
-//getElementByClassName()//only name of class //first such class
-//getElementByTagName()//only tag 
-//querySelector() //requires # for id , . for class
-//querySelectorAll()//all the tags with the given selector
-
+// var head=document.querySelector("head");
+// head.innerHTML+=`<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+// <link rel="icon" favicon-32x32.png">
+// <link rel="icon"  href="/favicon-16x16.png">
+// <link rel="manifest" href="/site.webmanifest">`;
+// head.innerHTML+='<link rel="shortcut icon" href="favicon.ico"/>';
 window.onscroll=()=>{sticknav();};
 
 var nav=document.getElementById("nav");
@@ -31,6 +19,9 @@ function sticknav()
         nav.classList.remove("sticky");
     }
 }
+
+
+
 
 
 
