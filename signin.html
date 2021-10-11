@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIKI</title>
+     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css"
+  </head>
+  <body>
+       <div id="title">
+      <h1>WIKI</h1>
+    </div>
+    <div id="nav">
+      <span>
+      <a href="index.html">HOME</a>
+      <a href="#">STORE</a>
+      <a href="#">FORUM</a>
+      </span>
+      <span style="float:right">
+        <a href="signin.html">SIGN IN</a>
+      </span>
+      </div>
+    </div>
+    <div class="content">
+    
+     <form>
+        <!-- form attributes:action and method(GET AND POST,PUT,DELETE)  GET APPENDS FORM INFO TO URL NOT SECURE get has chsr limit of 3000  post has no limit
+        input types -->
+
+        <!-- these elements are inline elements unlike p tags -->
+        
+        <div>
+            <label for ="fname">First Name:</label><br/> <!-- label tag requires id for = id and inpu thas the the same id --><input type="text" id="fname" name="fname" text="Enter fname"/><br/></div>
+        
+        </div>
+        <div>
+            <label for ="lname">Last Name:</label><br/>
+        <input type="text" id="lname" name="lname"/><br/>
+        </div>
+        
+        <div>
+             <label for="address">Address:</label><br/>
+        <textarea id ="address" rows="3" cols="20">Enter the address
+        </div>
+       
+        </textarea><br/>
+        <div></div>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" ><br/>
+        <div></div>
+        <div style="float: left">
+            <label for="gender">Gender:</label>
+        </div>
+        <div></div>
+        <div style="float: left">
+            <input type="radio" id="gender" name="gender" value="male">Male<br/> <!-- value=default value for text it is displayed inside the box for radio/check it is used to input value -->
+            <input type="radio" id="gender" name="gender" value="female">Female<br><!-- displays the word next to the box since they are inline elements-->
+        </div>
+        <br>
+        <br>
+        <br>
+        <input type="submit" name="submit" value="submit" >
+    </form>
+    
+    </div>
+     <div class="footer">
+      <a href="aboutus.html">About us</a><br>
+      <a href="contactus.html">Contact us</a><br>
+      <ul type="none" style="padding-left:0;">
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      </div>
+  </body>
+   <script src="index.js"></script>
+</html>

@@ -5,6 +5,7 @@
   }
 
   0% {
+<<<<<<< Updated upstream
     background-color: black;
   }
 }
@@ -48,17 +49,66 @@ html {
   width: 100%;
   min-height: 100vh;
   align-content: center0;
+=======
+    color: black;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  padding: 15px;
+}
+#nav a,
+.footer a {
+  text-decoration: none;
+  color: white;
+  margin: 6px;
+  transition: color 0.5s ease;
+}
+#nav a:hover,
+.footer a:hover {
+  color: gold;
+}
+#nav,
+.footer {
+  background-image: linear-gradient(to right, black, rgb(31, 31, 31));
+  width: 100%;
+  padding: 15px;
+  font-family: Lato;
+  font-weight: 600;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  background-image: url("ds.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* background-color: whitesmoke; */
+  width: 100%;
+  min-height: 80vh;
+  align-content: flex-start;
+>>>>>>> Stashed changes
   justify-content: center;
   flex-wrap: wrap;
 }
 .article {
   background-color: white;
+<<<<<<< Updated upstream
   min-height: 85vh;
+=======
+  min-height: 80vh;
+>>>>>>> Stashed changes
   width: 85%;
   color: lightslategray;
   margin: auto;
   font-family: Lato;
+<<<<<<< Updated upstream
   font-size: large;
+=======
+>>>>>>> Stashed changes
   text-align: justify;
   padding: 30px;
 }
@@ -81,6 +131,7 @@ html {
   margin: 25px;
 }
 
+<<<<<<< Updated upstream
 .shop {
   display: flex;
   font-family: Lato;
@@ -157,4 +208,23 @@ td:nth-child(3) {
 #signup input:focus {
   outline: black;
   border: 2px solid black;
+=======
+.article a:link {
+  color: gray;
+}
+.article a:visited {
+  color: gray;
+}
+
+form {
+  display: block;
+  background-color: white;
+  min-height: 80vh;
+  width: 85%;
+  color: gray;
+  margin: auto;
+  font-family: Lato;
+  text-align: justify;
+  padding: 30px;
+>>>>>>> Stashed changes
 }
