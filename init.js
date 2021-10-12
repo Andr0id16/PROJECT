@@ -5,7 +5,7 @@ function Player(sp) {
         speed: sp,
         width: 100,
         height: 100,
-        draw: function (ctx) {
+        draw: function(ctx) {
             var x = this.x;
             var y = this.y;
             //to draw a triangle
@@ -19,26 +19,13 @@ function Player(sp) {
         }
     }
 }
-function enemy(sp) {
-    return {
-        x: Math.random()*100,
-        y: Math.random()*100,
-        speed: sp,
-        width: 40,
-        height: 40,
-        draw: function (ctx) {
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-
-        }
-    }
-}
 
 var rightPressed = false;
 var leftPressed = false;
 var upPressed = false;
 var downPressed = false;
-var keyd=false;
-var spacePressed=false;
+var keyd = false;
+var spacePressed = false;
 
 var canvas = document.getElementById('canvas1');
 var ctx = canvas.getContext('2d');
@@ -47,19 +34,29 @@ var inGame = false;
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
-canvas.onclick = function (e) {
-    inGame = true;
-    $(canvas).animate({width:"800px",height:"800px"},1000);
+canvas.onclick = function(e) {
+    if (!inGame) {
+        inGame = true;
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+        $(canvas).animate({
+            width: "800px",
+            height: "800px"
+        }, 1000);
+    }
+
     e.stopPropagation();
 }
 
-document.body.onclick = function (e) {
-    inGame = false;
+document.body.onclick = function(e) {
+    if (inGame) {
+        document.removeEventListener("keydown", keyDownHandler, false);
+        document.removeEventListener("keyup", keyUpHandler, false);
+        inGame = false;
+    }
 }
 
 function keyDownHandler(e) {
-    if (!inGame) return;
-
     switch (e.key) {
         case "Right":
         case "ArrowRight":
@@ -85,10 +82,7 @@ function keyDownHandler(e) {
             spacePressed = true;
             break;
         case 68:
-            keyd=true;
-            break;
-
-        default:
+            keyd = true;
             break;
     }
 
@@ -96,8 +90,6 @@ function keyDownHandler(e) {
 }
 
 function keyUpHandler(e) {
-    if (!inGame) return;
-
     switch (e.key) {
         case "Right":
         case "ArrowRight":
@@ -123,10 +115,7 @@ function keyUpHandler(e) {
             spacePressed = false;
             break;
         case 68:
-            keyd=false;
-            break;
-
-        default:
+            keyd = false;
             break;
     }
 
@@ -134,9 +123,9 @@ function keyUpHandler(e) {
 }
 
 
-function clickHoldHandler(e){
+function clickHoldHandler(e) {
     if (!inGame) return;
-        mouseDown="true";
+    mouseDown = "true";
     e.preventDefault
 
 }
