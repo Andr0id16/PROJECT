@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <title>GAME</title>
-    <link rel="icon" href="favicon.ico" />
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css" />
     <link rel="stylesheet" href="animate.css" />
+    <link rel="icon" href="" />
     <script
       crossorigin
       src="https://unpkg.com/react@16/umd/react.development.js"
@@ -24,29 +25,42 @@
     <div id="title"></div>
     <div id="nav">
       <span>
-        <a href="index.html" style="border-bottom: 2px solid white">HOME</a>
+        <a href="index.html">HOME</a>
         <a href="tutorial.html">TUTORIAL</a>
         <a href="leaderboards.html">LEADERBOARDS</a>
         <a href="store.html">STORE</a>
-        <a href="login.html">LOGIN</a>
+        <a href="login.html" style="border-bottom: 2px solid white">LOGIN</a>
       </span>
-
       <span style="float: right">
         <a href="signup.html">SIGN IN</a>
       </span>
     </div>
 
     <div class="content">
-      <center>
-        <canvas
-          id="canvas1"
-          width="480"
-          height="600"
-          style="margin-top: 30px"
-        ></canvas>
-      </center>
-      <script type="text/javascript" src="init.js"></script>
-      <script type="text/javascript" src="main.js"></script>
+      <div class="article">
+        <h2 class="article-heading">Log In</h2>
+        <br />
+        <form id="signup">
+          <label for="username">Username</label><br />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+          /><span></span><br />
+
+          <label for="password">Password</label><br />
+          <input type="password" id="password" name="password" /><span></span
+          ><br />
+          <input
+            type="submit"
+            id="submit"
+            name="submit"
+            value="Log In"
+            style="width: 12%"
+          /><br />
+        </form>
+      </div>
     </div>
     <div class="footer-container"></div>
     <script src="index.js"></script>

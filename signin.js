@@ -43,7 +43,9 @@ function generateError(){
         error_message.push("email");
 
     }
-    else{
-        error_message=0;
+    if(document.getElementById("password").value!==document.getElementById("cpassword").value)
+    {
+        error_message.push("cpassword");
     }
+    
 }

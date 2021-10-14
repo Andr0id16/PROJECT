@@ -18,3 +18,5 @@ class Footer extends React.Component{
     }
 }
 ReactDOM.render(<Footer/>,destination);
+
+ReactDOM.render(<h1>GAME</h1>,document.getElementById("title"))

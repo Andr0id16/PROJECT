@@ -41,6 +41,7 @@ html {
 
 .content {
   display: flex;
+
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
