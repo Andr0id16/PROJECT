@@ -64,6 +64,7 @@ html {
   padding: 30px;
 }
 #title {
+  height: 131.867px;
   background-color: black;
   text-align: center;
   font-family: Lato;
@@ -96,7 +97,7 @@ html {
   background-color: white;
   height: 140px;
   width: 120px;
-  margin: 30px;
+  margin: 20px;
   color: black;
   font-family: Lato;
   text-align: center;
