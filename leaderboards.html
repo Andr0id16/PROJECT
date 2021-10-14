@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-    <title>WIKI</title>
+    <title>GAME</title>
 
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css" />
     <link rel="stylesheet" href="animate.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
+
   <body style="margin: 0; padding: 0">
     <div id="title">
       <h1>GAME</h1>
@@ -116,21 +126,8 @@
       </div>
     </div>
 
-    <div class="footer">
-      <a href="Aboutus.html">About us</a><br />
-      <a href="Contactus.html">Contact us</a><br />
-      <ul type="none" style="padding-left: 0">
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-      </ul>
-    </div>
+    <div class="footer-container"></div>
     <script src="index.js"></script>
+    <script type="text/babel" src="footer.js"></script>
   </body>
 </html>
