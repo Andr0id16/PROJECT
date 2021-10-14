@@ -1,0 +1,39 @@
+:root {
+  --time: 6;
+  --center-size: 300;
+  --triangle-ratio: 0.86;
+  --inner-ratio: 0.98;
+}
+
+.center-arrow {
+  width: 50%;
+  border-bottom: var(--center-size) * var(--triangle-ratio) px solid white;
+  border-left: (var(--center-size / 2)) px solid transparent;
+  border-right: (var(--center-size / 2)) px solid transparent;
+  transform-origin: 50% 65%;
+
+  animation: rotate-right var(--time) s;
+}
+
+.center-arrow-white {
+  position: relative;
+
+  top: ((--center-size * (1 - var(--inner-ratio)) + 1)/ 2) px;
+  left: --center-size * -1 * (var(--inner-ratio) / 2) px;
+
+  border-bottom: var(--center-size) * var(--triangle-ratio) * var(--inner-ratio)
+    px solid black;
+  border-left: (var(--center-size) * var(--inner-ratio) / 2) px solid
+    transparent;
+  border-right: (var(--center-size) * var(--inner-ratio) / 2) px solid
+    transparent;
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

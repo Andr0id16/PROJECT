@@ -1,3 +1,4 @@
+
 window.onscroll=()=>{sticknav();};
 var nav=document.getElementById("nav");
 var sticky = nav.offsetTop;
@@ -12,6 +13,8 @@ function sticknav()
         nav.classList.remove("sticky");
     }
 }
+
+
 
 
 
