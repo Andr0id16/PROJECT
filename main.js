@@ -23,11 +23,11 @@ function game_animate() {
     ctx.fillStyle = 'black';
     for(let i=0;i<5;i++)
     {
-    let e=enemies[i];
-    e.y+=Math.random()*e.speed*0.5;
-    e.x+=Math.random()*e.speed*0.5;
-    console.log(e);
-    e.draw(ctx);
+    // let e=enemies[i];
+    // e.y+=Math.random()*e.speed*0.5;
+    // e.x+=Math.random()*e.speed*0.5;
+    // console.log(e);
+    // e.draw(ctx);
     }
     
     

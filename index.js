@@ -1,7 +1,7 @@
 
 window.onscroll=()=>{sticknav();};
 var nav=document.getElementById("nav");
-var sticky = nav.offsetTop;
+    var sticky = nav.offsetTop;
 function sticknav()
 {
     
