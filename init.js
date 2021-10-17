@@ -26,6 +26,7 @@ var upPressed = false;
 var downPressed = false;
 var keyd = false;
 var spacePressed = false;
+var keysPressed = {};
 
 var canvas = document.getElementById('canvas1');
 var ctx = canvas.getContext('2d');
@@ -39,10 +40,6 @@ canvas.onclick = function(e) {
         inGame = true;
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
-        $(canvas).animate({
-            width: "800px",
-            height: "800px"
-        }, 1000);
     }
 
     e.stopPropagation();
@@ -57,68 +54,12 @@ document.body.onclick = function(e) {
 }
 
 function keyDownHandler(e) {
-    switch (e.key) {
-        case "Right":
-        case "ArrowRight":
-            rightPressed = true;
-            break;
-
-        case "Left":
-        case "ArrowLeft":
-            leftPressed = true;
-            break;
-
-        case "Up":
-        case "ArrowUp":
-            upPressed = true;
-            break;
-
-        case "Down":
-        case "ArrowDown":
-            downPressed = true;
-            break;
-
-        case 32:
-            spacePressed = true;
-            break;
-        case 68:
-            keyd = true;
-            break;
-    }
-
+    keysPressed[e.key] = true;
     e.preventDefault();
 }
 
 function keyUpHandler(e) {
-    switch (e.key) {
-        case "Right":
-        case "ArrowRight":
-            rightPressed = false;
-            break;
-
-        case "Left":
-        case "ArrowLeft":
-            leftPressed = false;
-            break;
-
-        case "Up":
-        case "ArrowUp":
-            upPressed = false;
-            break;
-
-        case "Down":
-        case "ArrowDown":
-            downPressed = false;
-            break;
-
-        case 32:
-            spacePressed = false;
-            break;
-        case 68:
-            keyd = false;
-            break;
-    }
-
+    keysPressed[e.key] = false;
     e.preventDefault();
 }
 
@@ -126,6 +67,5 @@ function keyUpHandler(e) {
 function clickHoldHandler(e) {
     if (!inGame) return;
     mouseDown = "true";
-    e.preventDefault
-
+    e.preventDefault()
 }
