@@ -28,9 +28,10 @@ class Game extends React.Component {
     }
     
     startGame(wordlist) {
+        console.log(wordlist);
         let temp_tags = [];
         for (var cnt = 0; cnt < wordlist.length; cnt++) {
-            temp_tags.push(<span class="unused">{wordlist[cnt]} </span>);
+            temp_tags.push(<span className="unused" key={cnt}>{wordlist[cnt]} </span>);
         }
 
         this.setState({
@@ -44,7 +45,10 @@ class Game extends React.Component {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                self.startGame(this.responseText.split(' '));
+                var array=JSON.parse(xhttp.responseText);
+                var randomNumber=Math.floor(Math.random()*array.length);
+                var quote = array[randomNumber].split(' ');
+                self.startGame(quote);
             }
         };
         xhttp.open('GET', this.props.txtfile);
@@ -100,4 +104,4 @@ class Game extends React.Component {
     }
 }
 
-ReactDOM.render(<Game txtfile='file2.txt'/>, document.getElementById('bb'));
+ReactDOM.render(<Game txtfile='quotes.txt'/>, document.getElementById('bb'));

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Anonymous Pro&family=Varela+Round&display=swap");
 @font-face {
   font-family: "VictorMono";
-  src: URL("TTF/VictorMono-Bold.ttf") format("truetype");
+  src: URL("TTF/VictorMono-medium.ttf") format("truetype");
 }
 @keyframes titleanimation {
   100% {

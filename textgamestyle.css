@@ -21,7 +21,8 @@
 #bb2 {
   color: goldenrod;
   border-radius: 5px;
-  height: 100px;
+  /* height: 100px; */
+  width: 80%;
   padding: 20px;
   font-family: "Anonymous Pro", monospace;
   background-color: #1d2021;

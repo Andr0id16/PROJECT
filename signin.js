@@ -25,12 +25,10 @@ submit.addEventListener(
         var next = ele.nextElementSibling;
         console.log(next);
         next.textContent = "❌";
+        e.preventDefault();
       }
-    } else {
-      document.getElementById("#signup").reset();
     }
-
-    e.preventDefault();
+    window.location.href = "http://127.0.0.1:5501/index.html";
   },
   true
 );
