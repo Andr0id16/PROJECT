@@ -1,0 +1,23 @@
+{
+  "name": "donkeytype",
+  "version": "1.0.0",
+  "description": "a typing game",
+  "main": "app.js",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andr0id16/PROJECT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andr0id16/PROJECT/issues"
+  },
+  "homepage": "https://github.com/Andr0id16/PROJECT#readme"
+}

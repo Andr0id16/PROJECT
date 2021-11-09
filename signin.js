@@ -26,9 +26,12 @@ submit.addEventListener(
         console.log(next);
         next.textContent = "❌";
         e.preventDefault();
+        error_message = [];
       }
+    } else {
+      e.preventDefault();
+      window.location.replace("127.0.0.1:5501/index.html");
     }
-    window.location.href = "http://127.0.0.1:5501/index.html";
   },
   true
 );
