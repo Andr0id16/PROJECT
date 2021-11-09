@@ -18,38 +18,23 @@
       src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="textgamestyle.css" />
+    <script type="text/babel" src="gamecontrols.jsx"></script>
   </head>
 
   <body style="margin: 0; padding: 0">
     <div id="title"></div>
-    <div id="nav">
-      <span>
-        <a href="index.html" style="border-bottom: 2px solid white">HOME</a>
-        <a href="tutorial.html">TUTORIAL</a>
-        <a href="leaderboards.html">LEADERBOARDS</a>
-        <a href="store.html">STORE</a>
-        <a href="login.html">LOGIN</a>
-      </span>
-
-      <span style="float: right">
-        <a href="signup.html">SIGN IN</a>
-      </span>
-    </div>
+    <div id="nav"></div>
 
     <div class="content">
       <center>
-        <canvas
-          id="canvas1"
-          width="480"
-          height="600"
-          style="margin-top: 30px"
-        ></canvas>
+        <div id="bb"></div>
+        <!-- <div id="bb2"></div> -->
       </center>
-      <script type="text/javascript" src="init.js"></script>
-      <script type="text/javascript" src="main.js"></script>
     </div>
     <div class="footer-container"></div>
     <script src="index.js"></script>
     <script type="text/babel" src="footer.js"></script>
+    <script type="text/babel" src="nav.js"></script>
   </body>
 </html>

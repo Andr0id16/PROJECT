@@ -1,0 +1,28 @@
+.word {
+  margin: 2px;
+}
+
+.gameinput {
+  background-color: #282828;
+  color: goldenrod;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  width: 300px;
+  height: 30px;
+  font-family: "Anonymous Pro", monospace;
+}
+.gameinput:focus {
+  outline: none;
+  border: none;
+}
+#bb,
+#bb2 {
+  color: goldenrod;
+  border-radius: 5px;
+  height: 100px;
+  padding: 20px;
+  font-family: "Anonymous Pro", monospace;
+  background-color: #1d2021;
+}

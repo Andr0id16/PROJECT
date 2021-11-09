@@ -1,11 +1,16 @@
 /* The element to apply the animation to */
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Anonymous Pro&family=Varela+Round&display=swap");
+@font-face {
+  font-family: "VictorMono";
+  src: URL("TTF/VictorMono-Bold.ttf") format("truetype");
+}
 @keyframes titleanimation {
   100% {
-    color: white;
+    color: goldenrod;
   }
 
   0% {
-    background-color: black;
+    color: rgb(31, 31, 30);
   }
 }
 
@@ -20,8 +25,8 @@ html {
 #nav a,
 .footer a {
   text-decoration: none;
-  color: white;
-  margin: 6px;
+  color: #7c6f64;
+  margin: 12px;
   transition: color 0.5s ease;
 }
 #nav a:hover,
@@ -30,10 +35,10 @@ html {
 }
 #nav,
 .footer {
-  background-image: linear-gradient(to right, black, rgb(31, 31, 31));
+  background-color: rgb(31, 31, 30);
   width: 100%;
   padding: 15px;
-  font-family: Lato;
+  font-family: "Varela Round", sans-serif;
   font-weight: 600;
   margin-bottom: 0px;
   box-sizing: border-box;
@@ -41,33 +46,29 @@ html {
 
 .content {
   display: flex;
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-image: linear-gradient(#378cc5, #f80c53);
-  width: 100%;
+  background-color: #282828;
   min-height: 100vh;
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 .article {
-  background-color: white;
+  background-color: #1d2021;
   min-height: 85vh;
   width: 85%;
-  color: lightslategray;
+  color: #ebdbb2;
   margin: auto;
-  font-family: Lato;
+  font-family: Anonymous Pro;
   font-size: large;
   text-align: justify;
   padding: 30px;
 }
 #title {
   height: 131.867px;
-  background-color: black;
+  background-color: rgb(31, 31, 30);
   text-align: center;
-  font-family: Lato;
+  /* font-family: "Varela Round", sans-serif; */
+  font-family: "VictorMono";
   animation-name: titleanimation;
   animation-duration: 6s;
   animation-fill-mode: forwards;
@@ -76,7 +77,7 @@ html {
   margin: 0;
 }
 .article-heading {
-  color: black;
+  color: #a89984;
 }
 .in-article-pic {
   float: right;
@@ -85,7 +86,7 @@ html {
 
 .shop {
   display: flex;
-  font-family: Lato;
+  font-family: Anonymous Pro;
   text-align: justify;
   align-content: flex-start;
   justify-content: flex-start;
@@ -94,16 +95,16 @@ html {
 }
 
 .products {
-  background-color: white;
+  background-color: #282828;
   height: 140px;
   width: 120px;
   margin: 20px;
-  color: black;
-  font-family: Lato;
+  color: #ebdbb2;
+  font-family: Anonymous Pro;
   text-align: center;
   padding: 30px;
   border-radius: 4px;
-  border: 2px solid rgb(109, 109, 109);
+  border: 2px;
   box-shadow: none;
   transition: color 0.5s, width 0.5s, height 0.5s, box-shadow 0.5s,
     border-radius 0.5s;
@@ -112,25 +113,21 @@ html {
 .products:hover {
   height: 150px;
   width: 130px;
-  box-shadow: 6px 4px 10px rgb(165, 165, 165);
+  box-shadow: 6px 4px 10px black;
   border-radius: 3px;
 }
 
 thead tr td {
   font-size: x-large;
-  color: black;
+  color: #a89984;
 }
 tr:nth-child(1) {
   font-weight: 900;
-  color: #242424;
+  color: #d65d0e;
 }
 tr:nth-child(2) {
   font-weight: 600;
-  color: #303030;
-}
-tr:nth-child(3) {
-  font-weight: 500;
-  color: #303030;
+  color: #fbf1c7;
 }
 td:first-child {
   width: 100px;
@@ -144,19 +141,24 @@ td:nth-child(3) {
 
 #signup label {
   font-size: x-large;
-  color: #000;
+  /* color: #000; */
 }
 
 #signup input {
   font-size: small;
+  font-family: "Anonymous Pro";
   width: 60%;
   max-width: 500px;
-  padding: 6px;
+  padding: 8px;
   margin-bottom: 30px;
   margin-top: 8px;
   height: 35px;
+  color: #ebdbb2;
+  background-color: #282828;
+  border-radius: 4px;
+  border: none;
 }
 #signup input:focus {
-  outline: black;
-  border: 2px solid black;
+  outline: none;
+  border: none;
 }
