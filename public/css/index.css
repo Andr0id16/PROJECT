@@ -1,8 +1,16 @@
 /* The element to apply the animation to */
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Anonymous Pro&family=Varela+Round&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Anonymous Pro&family=Varela+Round&display=swap"); */
 @font-face {
   font-family: "VictorMono";
   src: URL("/assets/TTF/VictorMono-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Varela Round";
+  src: URL("/assets/Varela_Round/VarelaRound-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  src: URL("/assets/Anonymous_Pro/Anonymous_Pro-Regular.ttf") format("truetype");
 }
 @keyframes titleanimation {
   100% {

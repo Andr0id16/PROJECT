@@ -4,8 +4,9 @@ var app = express();
 var router = express.Router();
 app.use(router);
 app.use(express.static(__dirname + "/public"));
-
-router.get("/", function (req, res) {
+app.use("/src", express.static(__dirname + "/src"));
+app.use("/assets", express.static(__dirname + "/assets"));
+router.get("/index", function (req, res) {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 router.get("/Aboutus", function (req, res) {
