@@ -1,16 +1,10 @@
-/* The element to apply the animation to */
-/* @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Anonymous Pro&family=Varela+Round&display=swap"); */
 @font-face {
   font-family: "VictorMono";
   src: URL("/assets/TTF/VictorMono-medium.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Varela Round";
-  src: URL("/assets/Varela_Round/VarelaRound-Regular.ttf") format("truetype");
-}
-@font-face {
   font-family: "Anonymous Pro";
-  src: URL("/assets/Anonymous_Pro/Anonymous_Pro-Regular.ttf") format("truetype");
+  src: URL("/assets/Anonymous_Pro/AnonymousPro-Regular.ttf") format("truetype");
 }
 @keyframes titleanimation {
   100% {
@@ -46,7 +40,7 @@ html {
   background-color: rgb(31, 31, 30);
   width: 100%;
   padding: 15px;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Anonymous Pro";
   font-weight: 600;
   margin-bottom: 0px;
   box-sizing: border-box;
@@ -66,7 +60,7 @@ html {
   width: 85%;
   color: #ebdbb2;
   margin: auto;
-  font-family: Anonymous Pro;
+  font-family: "Anonymous Pro";
   font-size: large;
   text-align: justify;
   padding: 30px;
@@ -94,7 +88,7 @@ html {
 
 .shop {
   display: flex;
-  font-family: Anonymous Pro;
+  font-family: "Anonymous Pro";
   text-align: justify;
   align-content: flex-start;
   justify-content: flex-start;
@@ -108,7 +102,7 @@ html {
   width: 120px;
   margin: 20px;
   color: #ebdbb2;
-  font-family: Anonymous Pro;
+  font-family: "Anonymous Pro";
   text-align: center;
   padding: 30px;
   border-radius: 4px;

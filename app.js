@@ -6,6 +6,8 @@ app.use(router);
 app.use(express.static(__dirname + "/public"));
 app.use("/src", express.static(__dirname + "/src"));
 app.use("/assets", express.static(__dirname + "/assets"));
+app.use("/images", express.static(__dirname + "/images"));
+
 router.get("/index", function (req, res) {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
