@@ -7,17 +7,18 @@ var usernameformat = new RegExp(/^[a-zA-Z0-9]{4,15}$/);
 var emailformat = new RegExp(
   /^[a-zA-Z0-9\.]{4,30}@[a-zA-Z0-9\.]{4,12}\.(com)|(edu)|(org)$/
 );
-
+nav = document.getElementById("nav");
 var error_message = [];
 submit.addEventListener(
   "click",
   function (e) {
     error_message = [];
-    var s = document.querySelectorAll("span");
+    var s = document.querySelectorAll(".x");
     for (var k = 0; k < s.length; k++) {
       s[k].textContent = "";
     }
     generateError();
+    console.log(error_message);
     if (error_message) {
       for (var i = 0; i < error_message.length; i++) {
         let j = error_message[i];
@@ -25,9 +26,10 @@ submit.addEventListener(
         var next = ele.nextElementSibling;
         console.log(next);
         next.textContent = "❌";
-        e.preventDefault();
-        error_message = [];
       }
+      e.preventDefault();
+      e.stopPropagation();
+      error_message = [];
     } else {
       e.preventDefault();
       window.location.replace("127.0.0.1:5501/index.html");
@@ -43,6 +45,8 @@ function generateError() {
   if (!emailformat.test(email.value)) {
     error_message.push("email");
   }
+  if (!document.getElementById("password").value)
+    error_message.push("password");
   if (
     document.getElementById("password").value !==
     document.getElementById("cpassword").value
