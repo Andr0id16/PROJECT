@@ -31,7 +31,7 @@ class Game extends React.Component {
         console.log(wordlist);
         let temp_tags = [];
         for (var cnt = 0; cnt < wordlist.length; cnt++) {
-            temp_tags.push(<span className="unused" key={cnt}>{wordlist[cnt]} </span>);
+            temp_tags.push(<span className="unused" id={'word'+cnt}>{wordlist[cnt]} </span>);
         }
 
         this.setState({
@@ -72,6 +72,10 @@ class Game extends React.Component {
                     event.target.value = '';
                     event.preventDefault();
 
+                    document.getElementById('word'+prevstate.count).classList.add(
+                        (tcorrect? 'correct' : 'wrong')
+                    );
+
                     if (this.state.count + 1 == this.state.words.length) {
                         clearInterval(this.f);
                         ReactDOM.render(<CalculateResult state={this.state}/>, document.getElementById('bb2'));
@@ -95,9 +99,7 @@ class Game extends React.Component {
     render() {
         return (
             <div>
-                {this.state.word_tags}
-                <span>{this.state.words[this.state.count]}</span>
-                <br/>
+                {this.state.word_tags}<br/>
                 <input className={"gameinput"} onKeyPress={this.key_pressed}/>
             </div>
         );

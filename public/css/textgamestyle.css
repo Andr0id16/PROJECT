@@ -27,3 +27,11 @@
   font-family: "Anonymous Pro", monospace;
   background-color: #1d2021;
 }
+span.correct {
+  background-color: #282828;
+  color: #b8bb26;
+}
+span.wrong {
+  background-color: #282828;
+  color: #fb4934;
+}
