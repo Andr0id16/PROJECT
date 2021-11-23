@@ -1,9 +1,12 @@
 var express = require("express");
-var loginstuff = require(__dirname + "\\src\\login.js");
+
 var path = require("path");
 var app = express();
 var router = express.Router();
 var bodyparser = require("body-parser");
+var { MongoClient } = require("mongodb");
+const { checkdatabase, url, checkuser } = require(__dirname +
+  "\\src\\login.js");
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(router);
@@ -13,9 +16,10 @@ app.use("/assets", express.static(__dirname + "/assets"));
 app.use("/images", express.static(__dirname + "/images"));
 
 router.post("/login", function (req, res) {
-  var user_name = req.body.username;
+  var username = req.body.username;
   var password = req.body.password;
-  console.log("User name = " + user_name + " ,password is " + password);
+  checkdatabase(username, password, url);
+  res.redirect("/index");
 });
 
 router.get("/index", function (req, res) {
