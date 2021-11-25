@@ -24,6 +24,7 @@ html {
   top: 0;
   padding: 15px;
 }
+
 #nav a,
 .footer a {
   text-decoration: none;
@@ -31,10 +32,12 @@ html {
   margin: 12px;
   transition: color 0.5s ease;
 }
+
 #nav a:hover,
 .footer a:hover {
   color: gold;
 }
+
 #nav,
 .footer {
   background-color: rgb(31, 31, 30);
@@ -163,4 +166,13 @@ td:nth-child(3) {
 #signup input:focus {
   outline: none;
   border: none;
+}
+
+#titlelink {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+span.current_word {
+    text-decoration: underline;
 }

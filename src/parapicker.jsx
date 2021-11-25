@@ -76,9 +76,14 @@ class Game extends React.Component {
                         (tcorrect? 'correct' : 'wrong')
                     );
 
+
                     if (this.state.count + 1 == this.state.words.length) {
                         clearInterval(this.f);
                         ReactDOM.render(<CalculateResult state={this.state}/>, document.getElementById('bb2'));
+                    } else {
+                        document.getElementById(
+                            'word'+(prevstate.count+1)).classList.add(
+                                'current_word');
                     }
 
                     return {
