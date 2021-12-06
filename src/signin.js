@@ -19,7 +19,7 @@ submit.addEventListener(
     }
     generateError();
     console.log(error_message);
-    if (error_message) {
+    if (error_message.length > 0) {
       for (var i = 0; i < error_message.length; i++) {
         let j = error_message[i];
         var ele = document.getElementById(j);
@@ -30,9 +30,6 @@ submit.addEventListener(
       e.preventDefault();
       e.stopPropagation();
       error_message = [];
-    } else {
-      e.preventDefault();
-      window.location.replace("127.0.0.1:5501/index.html");
     }
   },
   true

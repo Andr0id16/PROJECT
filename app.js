@@ -1,5 +1,4 @@
 var express = require("express");
-
 var path = require("path");
 var app = express();
 var router = express.Router();
@@ -7,6 +6,8 @@ var bodyparser = require("body-parser");
 var { MongoClient } = require("mongodb");
 const { checkdatabase, url, checkuser } = require(__dirname +
   "\\src\\login.js");
+
+const { registeruser } = require(__dirname + "\\src\\register.js");
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(router);
@@ -18,7 +19,24 @@ app.use("/images", express.static(__dirname + "/images"));
 router.post("/login", function (req, res) {
   var username = req.body.username;
   var password = req.body.password;
-  checkdatabase(username, password, url);
+  try {
+    checkdatabase(username, password, url);
+  } catch (err) {
+    console.log(err);
+  }
+  console.log("Logged In....You will be redirected to Home Page");
+  res.redirect("/index");
+});
+router.post("/signup", function (req, res) {
+  var username = req.body.username;
+  var password = req.body.password;
+  var emailaddress = req.body.email;
+  try {
+    registeruser(username, password, emailaddress);
+  } catch (err) {
+    console.log(err);
+  }
+  console.log("Registered......You will be redirected to Home page");
   res.redirect("/index");
 });
 

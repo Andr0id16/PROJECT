@@ -31,4 +31,11 @@ class Footer extends React.Component {
   }
 }
 ReactDOM.render(<Footer />, destination);
-ReactDOM.render(<h1>donkeytype</h1>, document.getElementById("title"));
+ReactDOM.render(
+  <h1>
+    <a id="titlelink" href="index.html">
+      donkeytype
+    </a>
+  </h1>,
+  document.getElementById("title")
+);

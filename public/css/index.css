@@ -164,3 +164,8 @@ td:nth-child(3) {
   outline: none;
   border: none;
 }
+
+#titlelink {
+  color: goldenrod;
+  text-decoration: none;
+}
