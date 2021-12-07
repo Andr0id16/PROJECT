@@ -25,6 +25,7 @@ router.post("/login", function (req, res) {
     console.log(err);
   }
   console.log("Logged In....You will be redirected to Home Page");
+
   res.redirect("/index");
 });
 router.post("/signup", function (req, res) {
