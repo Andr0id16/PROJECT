@@ -1,6 +1,6 @@
 function CalculateResult(props) {
-    let wpm = Math.round(props.state.words.length * 60 / props.state.seconds);
-    console.log(props.correct + "," + props.wrong)
+    let wpm = Math.round(props.state.correct.length * 60 / props.state.seconds);
+    console.log(props.correct + "," + props.wrong);
     return <span>WPM: {wpm}, Correct: {props.state.correct}, Wrong: {props.state.wrong}</span>
 }
 
