@@ -5,7 +5,7 @@ class Nav extends React.Component {
     return (
       <div>
         <span>
-          <a href="index.html">
+          <a href="/index">
             <i className="fas fa-keyboard"></i>
           </a>
           <a href="tutorial.html">
@@ -17,7 +17,7 @@ class Nav extends React.Component {
           <a href="store.html">
             <i className="fas fa-shopping-bag"></i>
           </a>
-          <a href="login.html">
+          <a href="/login">
             <i className="fas fa-user"></i>
           </a>
         </span>

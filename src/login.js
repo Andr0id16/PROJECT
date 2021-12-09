@@ -1,35 +1,23 @@
 var { MongoClient } = require("mongodb");
 var found = null;
 url = "mongodb://localhost:27017/database";
-async function checkuser(user, pass, collection) {
+function checkuser(user, pass, collection) {
   console.log("check user 1");
-  async function find(user, pass, collection) {
-    return new Promise(function (resolve, reject) {
-      collection
-        .find({ username: user, password: pass })
-        .toArray((err, result) => {
-          if (err) {
-            console.log("error occured while searching");
-          } else {
-            console.log(result);
-            if (result.length > 0) {
-              resolve(1);
-            } else {
-              reject(0);
-            }
-          }
-        });
-    });
+  function find(user, pass, collection) {
+    collection
+      .find({ username: user, password: pass })
+      .toArray((err, result) => {
+        if (err) {
+          console.log("error occured while searching");
+        } else {
+          return result;
+        }
+      });
   }
-  var found = await find(user, pass, collection);
-  console.log("check user 2");
-  console.log(found + " from checkuser");
-
-  return found;
 }
 
 function checkdatabase(username, password, url) {
-  MongoClient.connect(url, async function (err, client) {
+  MongoClient.connect(url, function (err, client) {
     if (!err) {
       db = client.db("database");
       console.log("Connected to database");
@@ -37,7 +25,7 @@ function checkdatabase(username, password, url) {
       try {
         console.log("check database 1");
         collection = db.collection("users");
-        found = await checkuser(username, password, collection);
+        found = checkuser(username, password, collection);
         console.log("check base 2");
         console.log(found);
         if (found == 1) {
@@ -63,3 +51,18 @@ function checkdatabase(username, password, url) {
 module.exports.checkuser = checkuser;
 module.exports.checkdatabase = checkdatabase;
 module.exports.url = url;
+
+//url is "mongodb://localhost:27017/"
+//databse name is database
+//collection name is users
+//typical doc is of the form
+//{username : string,password:string, email:string}
+
+//login page requires query of the form {username:username , password:passwor//in router.post()
+
+//the req.body.username is the username obtained from the login page
+//similarly for password
+
+//use those to make the query
+
+//redirect to main page only if user found

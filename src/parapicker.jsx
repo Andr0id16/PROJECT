@@ -4,7 +4,7 @@ function CalculateResult(props) {
   return <span>WPM: {wpm}, Correct: {props.state.correct}, Wrong: {props.state.wrong}</span>
 }
 
-class Game extends React.Component {
+class Game extends React.Component {s
  
   constructor(props) {
     super(props);
